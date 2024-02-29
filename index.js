@@ -30,6 +30,11 @@ const questions = [
         message: "Who contributed when making this project?",
         name: "contributions"
     },
+    {
+        type: "input",
+        message: "What tests are relevant to this project?",
+        name: "tests"
+    },
 ];
 
 // TODO: Create a function to write README file
