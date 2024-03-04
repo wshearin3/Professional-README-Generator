@@ -55,7 +55,7 @@ function writeToFile(README, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.createPromptModule(questions).then((answers) => {
+    inquirer.prompt(questions).then((answers) => {
         const READMEContent = writeToFile(answers);
     })
 }
