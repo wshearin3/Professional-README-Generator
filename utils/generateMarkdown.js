@@ -74,7 +74,7 @@ function generateMarkdown(answers, license) {
   let licenseSection = renderLicenseSection(answers.license);
   let licenseTOC = renderLicenseTOC(answers.license);
   let licenseHeader = renderLicenseSectionHeader(answers.license);
-  console.log(answers);
+ 
   return `# ${answers.projectTitle}
 
   ${licenseBadge}
