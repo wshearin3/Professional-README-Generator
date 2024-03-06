@@ -71,11 +71,11 @@ ${answers.contributions}
 
  ## Questions
  
- (github.com/${answers.username})
+ https://github.com/${answers.username}
 
  Please reach out to me with any additional questions you may have using my email address provided below:
 
- (${answers.email})
+ ${answers.email}
  
 
 `;
