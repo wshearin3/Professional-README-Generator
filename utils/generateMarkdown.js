@@ -43,13 +43,13 @@ function generateMarkdown(answers, license) {
   ${licenseBadge}
 
   ## Table of Contents
-* Description
-* Installation
-* Usage
-* License
-* Contributing
-* Tests
-* Questions
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
 
  ## Description
 ${answers.description}
@@ -71,7 +71,11 @@ ${answers.contributions}
 
  ## Questions
  
- github.com/${answers.username}
+ (github.com/${answers.username})
+
+ Please reach out to me with any additional questions you may have using my email address provided below:
+
+ (${answers.email})
  
 
 `;
