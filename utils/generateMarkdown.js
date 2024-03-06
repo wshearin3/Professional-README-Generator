@@ -37,6 +37,7 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers, license) {
   let licenseBadge = renderLicenseBadge(answers.license);
+  let licenseLink = renderLicenseLink(answers.license);
   console.log(answers);
   return `# ${answers.projectTitle}
 
