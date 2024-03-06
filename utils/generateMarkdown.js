@@ -52,13 +52,13 @@ function renderLicenseSection(license) {
   if (license == "No License") {
     return "";
   } else if (license == "MIT") {
-    return "";
+    return "This project is covered by the MIT License. Additional information about the license can be found at the link below.";
   } else if (license == "Apache") {
-    return "(https://opensource.org/licenses/Apache-2.0)";
+    return "This project is covered by the Apache License. Additional information about the license can be found at the link below.";
   } else if (license == "BSD") {
-    return "(https://opensource.org/licenses/BSD-3-Clause)";
+    return "This project is covered by the BSD License. Additional information about the license can be found at the link below.";
   } else if (license == "GPL") {
-    return "(https://www.gnu.org/licenses/gpl-3.0)";
+    return "This project is covered by the GPL License. Additional information about the license can be found at the link below.";
   }
 }
 
