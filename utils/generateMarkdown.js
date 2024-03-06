@@ -49,6 +49,20 @@ function generateMarkdown(answers, license) {
 * Tests
 * Questions
 
+ ## Description
+
+ ## Installation
+
+ ## Usage
+
+ ## License
+
+ ## Contributing
+
+ ## Tests
+
+ ## Questions
+
   ${licenseBadge}
 
 `;
