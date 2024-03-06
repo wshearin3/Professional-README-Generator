@@ -52,19 +52,25 @@ function generateMarkdown(answers, license) {
 * Questions
 
  ## Description
+${description}
 
  ## Installation
+${installation}
 
  ## Usage
+${usage}
 
  ## License
+ 
 
  ## Contributing
+${contributions}
 
  ## Tests
+ ${tests}
 
  ## Questions
-
+ 
  
 
 `;
