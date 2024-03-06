@@ -14,13 +14,36 @@ function renderLicenseBadge(license) {
   }
 }
 
+function renderLicenseTOC(license) {
+  if (license == "No License") {
+    return "";
+  } else if (license == "MIT") {
+    return "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)";
+  } else if (license == "Apache") {
+    return "![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)";
+  } else if (license == "BSD") {
+    return "![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)";
+  } else if (license == "GPL") {
+    return "![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)";
+  }
+}
+
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license == "No License") {
     return "";
+  } else {
+    return "* [License](#license)";
+}
+
+// TODO: Create a function that returns the license section of README
+// If there is no license, return an empty string
+function renderLicenseSection(license) {
+  if (license == "No License") {
+    return "";
   } else if (license == "MIT") {
-    return "(https://opensource.org/licenses/MIT)";
+    return "";
   } else if (license == "Apache") {
     return "(https://opensource.org/licenses/Apache-2.0)";
   } else if (license == "BSD") {
@@ -30,14 +53,12 @@ function renderLicenseLink(license) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers, license) {
   let licenseBadge = renderLicenseBadge(answers.license);
   let licenseLink = renderLicenseLink(answers.license);
+  let licenseSection = renderLicenseSection(answers.license);
+  let licenseTOC = renderLicenseTOC(answers.license);
   console.log(answers);
   return `# ${answers.projectTitle}
 
@@ -47,7 +68,7 @@ function generateMarkdown(answers, license) {
 * [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
-* [License](#license)
+${licenseTOC}
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
@@ -62,7 +83,8 @@ ${answers.installation}
 ${answers.usage}
 
  ## License
- 
+ ${licenseSection}
+ ${licenseLink}
 
  ## Contributing
 ${answers.contributions}
