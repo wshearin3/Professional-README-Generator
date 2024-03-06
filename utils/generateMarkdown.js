@@ -39,6 +39,15 @@ function generateMarkdown(answers, license) {
   let licenseBadge = renderLicenseBadge(answers.license);
   console.log(answers);
   return `# ${answers.projectTitle}
+
+  ## Table of Contents
+* Installation
+* Usage
+* License
+* Contributing
+* Tests
+* Questions
+
   ${licenseBadge}
 
 `;
