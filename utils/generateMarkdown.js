@@ -41,6 +41,7 @@ function generateMarkdown(answers, license) {
   return `# ${answers.projectTitle}
 
   ## Table of Contents
+* Description
 * Installation
 * Usage
 * License
