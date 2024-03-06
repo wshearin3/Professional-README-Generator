@@ -17,24 +17,33 @@ function renderLicenseBadge(license) {
 function renderLicenseTOC(license) {
   if (license == "No License") {
     return "";
-  } else if (license == "MIT") {
-    return "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)";
-  } else if (license == "Apache") {
-    return "![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)";
-  } else if (license == "BSD") {
-    return "![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)";
-  } else if (license == "GPL") {
-    return "![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)";
+  } else {
+    return "* [License](#license)";
+  }
+}
+
+function renderLicenseSectionHeader(license) {
+  if (license == "No License") {
+    return "";
+  } else {
+    return "## License";
   }
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license == "No License") {
-    return "";
-  } else {
-    return "* [License](#license)";
+if (license == "No License") {
+  return "";
+} else if (license == "MIT") {
+  return "https://opensource.org/licenses/MIT";
+} else if (license == "Apache") {
+  return "https://opensource.org/licenses/Apache-2.0";
+} else if (license == "BSD") {
+  return "https://opensource.org/licenses/BSD-3-Clause";
+} else if (license == "GPL") {
+  return "https://www.gnu.org/licenses/gpl-3.0";
+}
 }
 
 // TODO: Create a function that returns the license section of README
@@ -59,6 +68,7 @@ function generateMarkdown(answers, license) {
   let licenseLink = renderLicenseLink(answers.license);
   let licenseSection = renderLicenseSection(answers.license);
   let licenseTOC = renderLicenseTOC(answers.license);
+  let licenseHeader = renderLicenseSectionHeader(answers.license);
   console.log(answers);
   return `# ${answers.projectTitle}
 
@@ -82,7 +92,7 @@ ${answers.installation}
  ## Usage
 ${answers.usage}
 
- ## License
+ ${licenseHeader}
  ${licenseSection}
  ${licenseLink}
 
