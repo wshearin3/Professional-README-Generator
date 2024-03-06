@@ -40,6 +40,8 @@ function generateMarkdown(answers, license) {
   console.log(answers);
   return `# ${answers.projectTitle}
 
+  ${licenseBadge}
+
   ## Table of Contents
 * Description
 * Installation
@@ -63,7 +65,7 @@ function generateMarkdown(answers, license) {
 
  ## Questions
 
-  ${licenseBadge}
+ 
 
 `;
 }
